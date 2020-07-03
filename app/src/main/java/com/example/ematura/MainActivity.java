@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
-        button1 = findViewById(R.id.imageButton);
+        button1 = findViewById(R.id.imageButton6);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

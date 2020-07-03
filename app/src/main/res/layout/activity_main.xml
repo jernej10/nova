@@ -56,7 +56,6 @@
         android:baselineAlignBottom="false"
         android:cropToPadding="false"
         android:scaleType="fitCenter"
-        android:tint="@color/cardview_shadow_end_color"
         app:srcCompat="@drawable/matematika2" />
 
     <ImageButton
