@@ -3,28 +3,23 @@ package com.example.ematura;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
     private ImageButton button1;
+    private ImageButton button2;
+    private ImageButton button3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
 
-        button1 = findViewById(R.id.imageButton6);
+        button1 = findViewById(R.id.imageButtonM);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,9 +27,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        button2 = findViewById(R.id.imageButtonS);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToSlovenscina();
+            }
+        });
+
+        button3 = findViewById(R.id.imageButtonA);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToAnglescina();
+            }
+        });
+
     }
     private void moveToMatematika(){
         Intent intent = new Intent(MainActivity.this, MatematikaActivity.class);
+        startActivity(intent);
+    }
+    private void moveToAnglescina(){
+        Intent intent = new Intent(MainActivity.this, AnglescinaActivity.class);
+        startActivity(intent);
+    }
+    private void moveToSlovenscina(){
+        Intent intent = new Intent(MainActivity.this, SlovenscinaActivity.class);
         startActivity(intent);
     }
 }
